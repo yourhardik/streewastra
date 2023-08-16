@@ -1,0 +1,100 @@
+
+/* Button  2-------------------- */
+
+.button-2 {
+    --btn-bg: var(--primary);
+    --bg: #8d270b;
+    font-size: 1rem;
+    --width: 11.25rem;
+    --height: 3.75rem;
+    border: 0;
+    position: relative;
+    width: var(--width);
+    min-height: var(--height);
+    border-radius: var(--height);
+    color: #fff;
+    font-weight: bold;
+    background: var(--bg);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-2 .text,
+  .button-2 .icon-container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .button-2 .icon-container {
+    --icon-size: 25px;
+    position: relative;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin-left: 15px;
+    transition: transform 500ms ease;
+  }
+  
+  .button-2 .icon-container .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    transition: transform 500ms ease, opacity 250ms ease;
+  }
+  
+  .button-2 .icon-container .icon--left {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  
+  .button-2 .icon-container .icon svg {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  
+  .button-2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-bg);
+    border-radius: var(--height);
+    z-index: 1;
+    transition: transform 500ms ease;
+  }
+  
+  .submit {
+    margin-left: auto;
+    backface-visibility: hidden;
+  }
+  
+  .button-2:hover::after {
+    transform: translateX(65%);
+  }
+  
+  .button-2:hover .icon-container {
+    transform: translateX(125%);
+  }
+  
+  .button-2:hover .icon-container .icon--left {
+    transform: translateX(-45%);
+    opacity: 1;
+  }
+  
+  .submit:hover .icon-container .icon--left {
+    transform: translateX(-35%);
+    opacity: 1;
+  }
+  
+  .button-2:hover .icon-container .icon--right {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  
